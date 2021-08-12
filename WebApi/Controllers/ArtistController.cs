@@ -38,7 +38,7 @@ namespace WebApi.Controllers
                 "(biography, title, imageURL, heroURL) " +
                 "OUTPUT Inserted.artistID " +
                 "VALUES (@title, @biography, @imageURL, @heroURL)");
-            return Json(new ArtistAddResponse() { ArtistId = Convert.ToInt32(dtArtist.Rows[0]["artistId"]) });
+            return Json(new ArtistAddResponse() { ArtistId = Convert.ToInt32(dtArtist.Rows[0]["artistID"]) });
         }
 
     }

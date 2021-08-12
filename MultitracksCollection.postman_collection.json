@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "333b915d-998c-4c20-b3e5-1fcf19660821",
+		"name": "MultitracksCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"music\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/artist/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"artist",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"pageSize\": 2, \r\n    \"pageNumber\": 2,\r\n    \"filterBy\": [\r\n        {\r\n            \"fieldName\": \"title\",\r\n            \"fieldValue\": \"c\"\r\n        }\r\n    ] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/song/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"song",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"The best artist\",\r\n    \"biography\": \"Biography of the best artist\",\r\n    \"imageURL\": \"https://somewhere/image.jpg\",\r\n    \"heroURL\": \"https://somewhere/hero.jpg\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/artist/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"artist",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
