@@ -22,7 +22,7 @@ BEGIN
 	-- TODO: Review time signaturen
 	-- TODO: Review criteria for top songs
 	SELECT TOP 3 
-		s.albumId, s.title AS songTitle, floor(s.bpm) as bpmConverted,  
+		s.albumID, s.title AS songTitle, floor(s.bpm) as bpmConverted,  
 		CASE   
 		WHEN s.timeSignature = 3 THEN '4/4'   
 		WHEN s.timeSignature = 13 THEN '3/4'   
